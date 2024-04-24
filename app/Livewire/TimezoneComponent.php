@@ -10,6 +10,12 @@ class TimezoneComponent extends Component
     public $selectedTimezone;
     public $currentTime;
     // public $showForm = true;
+    
+    public function mount()
+    {
+        // Set the default value of $selectedTimezone to the current timezone
+        $this->selectedTimezone = date_default_timezone_get();
+    }
 
     public function getTime()
     {
